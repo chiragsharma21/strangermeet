@@ -237,10 +237,27 @@ const SERVER_URL = "strangermeet-production-28dc.up.railway.app"; // e.g. https:
 // ── WebRTC config (using free Metered TURN) ───────────────────────────────────
 const RTC_CONFIG = {
   iceServers: [
-    { urls: "stun:stun.l.google.com:19302" },
-    { urls: "stun:stun1.l.google.com:19302" },
-    // Add your free Metered.ca TURN credentials here for better connectivity
-    // { urls: "turn:relay.metered.ca:80", username: "...", credential: "..." }
+    { urls: "stun:stun.relay.metered.ca:80" },
+    {
+      urls: "turn:global.relay.metered.ca:80",
+      username: "fb842305613110c3371c4cc7",
+      credential: "t1wLqv6hkvcvusAu",
+    },
+    {
+      urls: "turn:global.relay.metered.ca:80?transport=tcp",
+      username: "fb842305613110c3371c4cc7",
+      credential: "t1wLqv6hkvcvusAu",
+    },
+    {
+      urls: "turn:global.relay.metered.ca:443",
+      username: "fb842305613110c3371c4cc7",
+      credential: "t1wLqv6hkvcvusAu",
+    },
+    {
+      urls: "turns:global.relay.metered.ca:443?transport=tcp",
+      username: "fb842305613110c3371c4cc7",
+      credential: "t1wLqv6hkvcvusAu",
+    },
   ],
 };
 
